@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/Users/DELL/vamshi/WatchPop/front/app/discover/page.tsx"],"sourcesContent":["export default function DiscoverPage() {\r\n  return (\r\n    <main style={{ padding: 24 }}>\r\n      <h1>🔍 Discover</h1>\r\n      <p>Discover page is working</p>\r\n    </main>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;QAAK,OAAO;YAAE,SAAS;QAAG;;0BACzB,8OAAC;0BAAG;;;;;;0BACJ,8OAAC;0BAAE;;;;;;;;;;;;AAGT"}}]
-}
