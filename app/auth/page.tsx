@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = "force-dynamic";
+
 import { useState, useEffect } from "react";
 import Script from "next/script";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -10,6 +12,8 @@ declare global {
     google: any;
   }
 }
+
+const API = process.env.NEXT_PUBLIC_API_URL;
 
 export default function AuthPage() {
   const router = useRouter();
@@ -36,7 +40,7 @@ export default function AuthPage() {
       const body =
         mode === "login" ? { email, password } : { name, email, password };
 
-      const res = await fetch(`http://localhost:8000${endpoint}`, {
+      const res = await fetch(`${API}${endpoint}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -66,7 +70,7 @@ export default function AuthPage() {
           client_id:
             "881288169563-1h7o3ocu33tv8f907720ddh6l3n2d6l1.apps.googleusercontent.com",
           callback: async (response: any) => {
-            const res = await fetch("http://localhost:8000/auth/google", {
+            const res = await fetch(`${API}/auth/google`, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               credentials: "include",
