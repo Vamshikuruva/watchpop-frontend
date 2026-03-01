@@ -13,7 +13,7 @@ declare global {
 
 const API = process.env.NEXT_PUBLIC_API_URL;
 
-export default function AuthPage() {
+export default function AuthClient() {
   const router = useRouter();
   const { login } = useAuth();
 
